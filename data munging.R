@@ -4,7 +4,7 @@ library(dplyr)
 library(shiny)
 
 #to diplay data in dataframes as summary tables
-tbl_df(BGCdat)
+tbl_df(FLUXdat)
 glimpse(FLUXdat)
 View(FLUXdat) #same as double clicking or 'inspect'
 ###################################################################
@@ -44,8 +44,8 @@ PLOTENZmean = ENZdat %>%
   summarise(avg = mean(AG_15C)) %>%
   arrange(avg)
 
-library("swirl")
-swirl()
+# library("swirl")
+# swirl()
 
 
 #
