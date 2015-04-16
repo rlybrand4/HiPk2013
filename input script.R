@@ -2,7 +2,7 @@
 # If you don't ... create one ... then download all the datafiles from iPlant
 
 #all files are dot.csv files - you can open them any number of ways - I've opted to use read.csv
-#data files that are dot.xlsx might be interesting too but they are not pulled into R - they should contain identical data to the dot.csv files
+#data files that are dot.xlsx might be interesting toBGo but they are not pulled into R - they should contain identical data to the dot.csv files
 #information about the headers and contents of each file is contained within the associated README.txt file (with the shared filename)
 
 
@@ -32,3 +32,6 @@ PYRdat = read.csv("data/PyrolysisAllSitesRelativeProportions_MASTER.csv",header=
 #explore and plot variables within each data frame
 #calculate summary statistics for key variables
 #merge key variables to allow regression analysis
+
+#after you have read in the data - save the bundle of dataframes to an rData file so that you can load it later.
+save (BGCdat,DISdef, ENZdat, FLUXdat, PYRdat, file="HiPK2013.rda")

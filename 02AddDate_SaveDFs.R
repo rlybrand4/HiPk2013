@@ -43,9 +43,18 @@ FLUXdat$MONTH = substr(F1, 5, 6)
 FLUXdat$DAY = substr(F1, 7, 8)
 FLUXdat$rDate  = ISOdate(FLUXdat$YEAR,FLUXdat$MONTH,FLUXdat$DAY)
 
+FLUXdat$month = as.numeric(strftime(FLUXdat$rDate, format = "%m"))
+FLUXdat$week = as.numeric(strftime(FLUXdat$rDate, format = "%W"))
+summary(FLUXdat$week)
+
 #PYRdat has dates listed as YEAR, MONTH and DAY which are NUMBERS
 PYRdat$rDate =as.Date(ISOdate (PYRdat$YEAR,PYRdat$MONTH,PYRdat$DAY))
 #need to add the HHMMSS to the rDate variable for Flux data
+
+PYRdat$month = as.numeric(strftime(PYRdat$rDate, format = "%m"))
+PYRdat$week = as.numeric(strftime(PYRdat$rDate, format = "%W"))
+summary(PYRdat$week)
+
 
 
 

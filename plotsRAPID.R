@@ -17,8 +17,16 @@ plot(FLUXdat$SITE,FLUXdat$EFFLUX)
 plot(FLUXdat$Tsoil_C,FLUXdat$EFFLUX)
 
 #From the PYROLYSIS dataframe:
-plot(PYRdat$SITE,PYRdat$Aromatic)
+plot(PYRdat$Beetle[PYRdat$SITE=="FEF"],PYRdat$Phenol[PYRdat$SITE=="FEF"])
+plot(PYRdat$SITE,PYRdat$Phenol)
+
 plot(PYRdat$Protein,PYRdat$Lignin)
+
+PYRdat$Beetle = as.factor(substr(PYRdat$PLOTID, 7,7))
+
+ENZdat$Beetle = as.factor(substr(ENZdat$PLOTID, 7,7))
+plot(ENZdat$Beetle,ENZdat$BG_15C)
+plot(ENZdat$Beetle,ENZdat$XYL_15C)
 
 
 #ggplot
