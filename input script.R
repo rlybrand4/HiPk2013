@@ -34,4 +34,4 @@ PYRdat = read.csv("data/PyrolysisAllSitesRelativeProportions_MASTER.csv",header=
 #merge key variables to allow regression analysis
 
 #after you have read in the data - save the bundle of dataframes to an rData file so that you can load it later.
-save (BGCdat,DISdef, ENZdat, FLUXdat, PYRdat, file="HiPK2013.rdata")
+save (BGCdat,DISdef, ENZdat, FLUXdat, PYRdat, file="HiPK2013.rda")
